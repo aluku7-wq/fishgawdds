@@ -12,7 +12,7 @@ const Login = () => {
 
         <div className="login">
           <p>
-            Not registered? <Link to="/login">Signup</Link>
+            Not registered? <Link to="/signup">Signup</Link>
           </p>
         </div>
       </div>
