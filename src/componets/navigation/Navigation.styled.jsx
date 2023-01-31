@@ -20,7 +20,8 @@ export const Container = styled.div`
       h3 {
         color: #fff;
         font-weight: 700;
-        letter-spacing: 8px;
+        font-size: 32px;
+        /* letter-spacing: 8px; */
         span {
           font-weight: 100;
         }

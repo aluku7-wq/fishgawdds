@@ -1,8 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import image from "../../images/logo.png";
 import { Container } from "./Navigation.styled";
 
 const Navigation = () => {
+  const location = useLocation();
+
+  if (location.pathname.includes("auth") == true) {
+    return null;
+  }
   return (
     <Container>
       <div className="logo">

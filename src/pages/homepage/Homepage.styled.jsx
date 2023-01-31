@@ -67,7 +67,7 @@ export const Container = styled.div`
         gap: 24px;
         justify-content: end;
         padding-top: 24px;
-        button {
+        a {
           background-color: #ffbc2b;
           color: #fff;
           border: 2px solid #ffbc2b;
@@ -75,6 +75,8 @@ export const Container = styled.div`
           padding: 8px 0;
           font-size: 18px;
           border-radius: 7px;
+          text-decoration: none;
+          text-align: center;
         }
         .purchase {
           background-color: transparent;

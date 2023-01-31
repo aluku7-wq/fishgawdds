@@ -1,19 +1,10 @@
 import { useState } from "react";
-import game1 from "../../images/game1.jpg";
-import game2 from "../../images/game2.jpg";
-import game3 from "../../images/game3.jpg";
-import game4 from "../../images/game4.jpg";
+import { NavLink } from "react-router-dom";
+import { games } from "../../componets/data/Data";
 import { Container } from "./Homepage.styled";
 
 const Homepage = () => {
-  const games = [
-    { name: "game1", image: game1 },
-    { name: "game2", image: game2 },
-    { name: "game3", image: game3 },
-    { name: "game4", image: game4 },
-  ];
   const [herobg, setherobg] = useState(0);
-  const [herogame, setherogame] = useState(games[herobg].name);
   return (
     <Container>
       <div className="side">
@@ -55,9 +46,14 @@ const Homepage = () => {
           <h3>
             all payments are made through <span>cash app</span>
           </h3>
+          <h1>${games[herobg].price}</h1>
           <div className="buttons">
-            <button>play</button>
-            <button className="purchase">purchase</button>
+            <a href={`${games[herobg].link}`} target="_blank" rel="noreferrer">
+              play
+            </a>
+            <NavLink to="/login" className="purchase">
+              purchase
+            </NavLink>
           </div>
         </div>
       </div>
